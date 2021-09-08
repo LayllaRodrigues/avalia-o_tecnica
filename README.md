@@ -1,2 +1,2 @@
-# avalia-o_tecnica
+# Testes
 testes de automação 
