@@ -10,7 +10,17 @@ Resource            ../resources/Steps.robot
 *Test Cases*
 Pesquisando personagens
     Pesquisando Personagens
-  
-Verificando status code 
 
-    Verificando status code                 ${STATUS_ESPERADO}           
+Validando quantidade de personagens retornados
+    Validando quantidade retornada
+
+Validando status code 
+    Verificando status code         ${STATUS_ESPERADO}
+
+
+
+
+
+
+              
+     

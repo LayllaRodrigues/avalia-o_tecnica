@@ -14,4 +14,9 @@ Listando personagem especifico
 
 
 Validando status code
-    Conferindo status code                 ${STATUS_ESPERADO}           
+    Conferindo status code                 ${STATUS_ESPERADO} 
+
+Validando se houve retorno de apenas um personagem
+    Verificando retorno de personagem especifico
+
+
