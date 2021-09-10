@@ -9,7 +9,7 @@ ${ts}                   1631150721003
 ${apikey}               e9e22f92431df9f73920f281caabb68c     
 ${hash}                 f0b3298fa4957047893445f8d19881b8
 ${limit}                limit=5
-${STATUS_ESPERADO}      200
+${expected_status}      200
 ${ID}                   1009368?
 ${limit_comic}          limit=1
 

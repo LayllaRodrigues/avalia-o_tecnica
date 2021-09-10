@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Busca de personagens na API MARVEL  
+Documentation       MARVEL API Character Search  
 
 Library               RequestsLibrary
 Library               Collections     
@@ -7,14 +7,14 @@ Resource           ${EXECDIR}/resources/Base.robot
 Resource           ${EXECDIR}/resources/Steps.robot
 
 *Test Cases*
-Pesquisando personagens
-    Pesquisando Personagens
+Searching Characters
+    Searching Characters
 
-Validando quantidade de personagens retornados
-    Validando quantidade retornada
+Validating number of characters returned
+    Validating returned quantity
 
-Validando status code 
-    Verificando status code         ${STATUS_ESPERADO}
+Validating status codes 
+    Checking status code         ${expected_status}
 
 
 

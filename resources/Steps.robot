@@ -7,52 +7,44 @@ Resource            ./routes/Comics.robot
 
 
 *Keyword*
-Pesquisando Personagens
-
-    ${Resposta}            GET      ${host}${characters}${limit}   
+Searching Characters
+    ${Response}            GET      ${host}${characters}${limit}   
     ...                             ${headers} 
-    BuiltIn.Set Suite Variable      ${Resposta}
+    BuiltIn.Set Suite Variable      ${Response}
 
-Validando quantidade retornada
-    Dictionary Should Contain Item      ${Resposta.json()["data"]}   limit   5
+Validating returned quantity
+    Dictionary Should Contain Item      ${Response.json()["data"]}   limit   5
 
-Verificando status code
-    [Arguments]     ${STATUS_ESPERADO}
-    Should Be Equal As Strings   ${Resposta.status_code}  ${STATUS_ESPERADO}
-    Log             Status Code Retornado: ${Resposta.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}
+Checking status code
+    [Arguments]     ${expected_status}
+    Should Be Equal As Strings   ${Response.status_code}  ${expected_status}
+    Log             Status Code Retornado: ${Response.status_code} -- Status Code Esperado: ${expected_status}
 
-Conferindo status code
-    [Arguments]     ${STATUS_ESPERADO}
-    Should Be Equal As Strings   ${RespostaId.status_code}  ${STATUS_ESPERADO}
-    Log             Status Code Retornado: ${RespostaId.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}
+Conference status code
+    [Arguments]     ${expected_status}
+    Should Be Equal As Strings   ${ResponseId.status_code}  ${expected_status}
+    Log             Status Code Retornado: ${ResponseId.status_code} -- Status Code Esperado: ${expected_status}
 
-Listando personagem especifico
-    ${RespostaId}            GET        ${host}/${characterId}${ID}    
+Listing specific character
+    ${ResponseId}            GET        ${host}/${characterId}${ID}    
     ...                                 ${headers} 
-    BuiltIn.Set Suite Variable          ${RespostaId}
+    BuiltIn.Set Suite Variable          ${ResponseId}
 
-Verificando retorno de personagem especifico
-    Dictionary Should Contain Item      ${RespostaId.json()["data"]}   count   1
+Checking the return of a specific character
+    Dictionary Should Contain Item      ${ResponseId.json()["data"]}   count   1
 
-Listando comic especifico
-
-    ${RespostaComics}            GET      ${host}${comics}${limit_comic}   
+Listing a specific comic
+    ${ResponseComics}            GET      ${host}${comics}${limit_comic}   
     ...                                   ${headers} 
-    BuiltIn.Set Suite Variable            ${RespostaComics}
+    BuiltIn.Set Suite Variable            ${ResponseComics}
 
-Validando status code do filtro de comics
-    [Arguments]     ${STATUS_ESPERADO}
-    Should Be Equal As Strings   ${RespostaComics.status_code}  ${STATUS_ESPERADO}
-    Log             Status Code Retornado: ${RespostaComics.status_code} -- Status Code Esperado: ${STATUS_ESPERADO}
+Validating comics status code
+    [Arguments]     ${expected_status}
+    Should Be Equal As Strings   ${ResponseComics.status_code}  ${expected_status}
+    Log             Status Code Retornado: ${ResponseComics.status_code} -- Status Code Esperado: ${expected_status}
 
-Verificando retorno das comics
-    Dictionary Should Contain Item      ${RespostaComics.json()["data"]}   count   1
+Checking comics returns
+    Dictionary Should Contain Item      ${ResponseComics.json()["data"]}   count   1
 
-Verificando se filtro retornou comics sobre o Wolverine
-    BuiltIn.Should Contain      ${RespostaComics.json()["data"]["results"][0]}    title     Wolverine Saga (2009) #7
-
-
-
-
-
-
+Checking if the filter returned comics about Wolverine    
+    BuiltIn.Should Contain      ${ResponseComics.json()["data"]["results"][0]}    title     Wolverine Saga (2009) #7

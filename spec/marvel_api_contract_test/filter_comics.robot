@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Filtra comics de um personagem especifico na API MARVEL  
+Documentation       Filters comics of a specific character in the MARVEL API  
 
 Library               RequestsLibrary
 Library               Collections     
@@ -7,14 +7,14 @@ Resource           ${EXECDIR}/resources/Base.robot
 Resource           ${EXECDIR}/resources/Steps.robot
 
 *Test Cases*
-Listando comics de um personagem especifico
-    Listando comic especifico
+Listing comics of a specific character
+    Listing a specific comic
 
-Validando status code após filtro
-    Validando status code do filtro de comics       ${STATUS_ESPERADO} 
+Validating status codes
+    Validating comics status code       ${expected_status}
 
-Validando se houve retorno de comics apenas de um personagem
-    Verificando retorno das comics
+Validating if there was only one character's comics return
+    Checking comics returns
 
-Verificando personagem filtrado
-    Verificando se filtro retornou comics sobre o Wolverine
+Checking filtered character
+    Checking if the filter returned comics about Wolverine

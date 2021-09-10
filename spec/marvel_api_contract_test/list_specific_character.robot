@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Busca de personagem especifico na API MARVEL  
+Documentation       Searching for a specific character in the MARVEL API  
 
 Library               RequestsLibrary
 Library               Collections     
@@ -7,14 +7,13 @@ Resource            ${EXECDIR}/resources/Base.robot
 Resource            ${EXECDIR}/resources/Steps.robot
 
 *Test Cases*
-Listando personagem especifico
-    Listando personagem especifico
+Listing specific character
+    Listing specific character
 
+Validating status codes
+    Conference status code              ${expected_status}
 
-Validando status code
-    Conferindo status code                 ${STATUS_ESPERADO} 
-
-Validando se houve retorno de apenas um personagem
-    Verificando retorno de personagem especifico
+Validating that only one character has returned
+    Checking the return of a specific character
 
 
