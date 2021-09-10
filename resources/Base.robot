@@ -11,6 +11,7 @@ ${hash}                 f0b3298fa4957047893445f8d19881b8
 ${limit}                limit=5
 ${STATUS_ESPERADO}      200
 ${ID}                   1009368?
+${limit_comic}          limit=1
 
 &{headers}      ts=${ts}    apikey=${apikey}      hash=${hash}      
 
