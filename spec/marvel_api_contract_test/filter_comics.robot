@@ -3,8 +3,8 @@ Documentation       Filtra comics de um personagem especifico na API MARVEL
 
 Library               RequestsLibrary
 Library               Collections     
-Resource            ../resources/Base.robot
-Resource            ../resources/Steps.robot
+Resource           ${EXECDIR}/resources/Base.robot
+Resource           ${EXECDIR}/resources/Steps.robot
 
 *Test Cases*
 Listando comics de um personagem especifico

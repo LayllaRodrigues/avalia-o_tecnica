@@ -3,9 +3,8 @@ Documentation       Busca de personagens na API MARVEL
 
 Library               RequestsLibrary
 Library               Collections     
-Resource            ../resources/Base.robot
-Resource            ../resources/Steps.robot
-
+Resource           ${EXECDIR}/resources/Base.robot
+Resource           ${EXECDIR}/resources/Steps.robot
 
 *Test Cases*
 Pesquisando personagens
