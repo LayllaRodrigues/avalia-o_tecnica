@@ -51,4 +51,7 @@ Informando bday do segurado
     Click Element                       css:input[tabindex="4"]
     Input text                          css:input[tabindex="4"]          ${PersonBday}
    
+
+Informando sexo do segurado
+    Click Element                       css:label[class="radio-button__fake-radio"][for="life_order_flow_advisor_review_insured_person_attributes_gender_male"]
  
