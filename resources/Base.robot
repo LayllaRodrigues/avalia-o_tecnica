@@ -16,4 +16,3 @@ ${limit_comic}          limit=1
 &{headers}      ts=${ts}    apikey=${apikey}      hash=${hash}      
 
 ${host}         https://gateway.marvel.com
-

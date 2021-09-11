@@ -4,6 +4,7 @@ Library             Collections
 Resource            ./routes/Characters.robot
 Resource            ./routes/CharacterId.robot
 Resource            ./routes/Comics.robot
+Resource             ${EXECDIR}/resources/actions/life.robot 
 
 
 *Keyword*
@@ -48,3 +49,7 @@ Checking comics returns
 
 Checking if the filter returned comics about Wolverine    
     BuiltIn.Should Contain      ${ResponseComics.json()["data"]["results"][0]}    title     Wolverine Saga (2009) #7
+
+
+
+
