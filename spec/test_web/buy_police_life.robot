@@ -21,7 +21,8 @@ Cotando life
     Informando email do segurado
     Informando phone do segurado
     Informando bday do segurado
-    Informando sexo do segurado
+    Informando genero do segurado
+    Informando status civil
 
    
 
