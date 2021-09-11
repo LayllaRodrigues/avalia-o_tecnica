@@ -20,6 +20,8 @@ Cotando life
     Informando nome do segurado  
     Informando email do segurado
     Informando phone do segurado
+    Informando bday do segurado
+
    
 
 
