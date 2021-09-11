@@ -19,6 +19,7 @@ Cotando life
     Selecionando cotar life
     Informando nome do segurado  
     Informando email do segurado
+    Informando phone do segurado
    
 
 
