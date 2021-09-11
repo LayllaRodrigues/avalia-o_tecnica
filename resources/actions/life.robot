@@ -8,7 +8,10 @@ Library     SeleniumLibrary
 
 ***Variables***
 
-${PersonName}   John Macquaire
+${PersonName}           John Macquaire
+${PersonEmail}          teste@teste.com.br
+${PersonPhone}          01198765434
+${PersonBday}           11091980
 
 
 *** Keywords ***
@@ -32,4 +35,20 @@ Informando nome do segurado
     Click Element                       css:input[tabindex="1"]
     Input text                          css:input[tabindex="1"]         ${PersonName}
 
+Informando email do segurado
+    Wait Until Element Is Visible       css:input[tabindex="2"]
+    Click Element                       css:input[tabindex="2"]
+    Input text                          css:input[tabindex="2"]          ${PersonEmail}
 
+
+Informando phone do segurado
+    Wait Until Element Is Visible       css:input[tabindex="3"]
+    Click Element                       css:input[tabindex="3"]
+    Input text                          css:input[tabindex="3"]          ${PersonPhone}
+
+Informando bday do segurado
+    Wait Until Element Is Visible       css:input[tabindex="4"]
+    Click Element                       css:input[tabindex="4"]
+    Input text                          css:input[tabindex="4"]          ${PersonBday}
+   
+ 

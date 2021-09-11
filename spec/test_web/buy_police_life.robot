@@ -17,7 +17,12 @@ Cotando life
     Set Selenium Timeout                        30s
     Autorizando cookies
     Selecionando cotar life
-    Informando nome do segurado     
+    Informando nome do segurado  
+    Informando email do segurado
+   
+
+
+   
 
 
 
