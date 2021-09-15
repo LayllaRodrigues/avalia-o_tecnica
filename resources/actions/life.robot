@@ -135,3 +135,26 @@ Preenchendo nome do dono do cartão
     Input Text                                  css:input[placeholder="Nome como no cartão"]                                             ${PersonName}
 
 
+Selecionando personalizar plano
+    Click Element                               css:input[type="submit"][value="Personalizar"]
+
+Arrastando barra de cobertura
+    Click Element                               css:a[data-slider="increase-button"]
+
+Selecionando LMI
+    Repeat Keyword    130   Arrastando barra de cobertura       
+
+Validando que selecionei o limite total de LMI
+    ${lmi_selecionado}    Get Text    css:div[data-slider="value"]
+    ${lmi_máximo}         Get Text    css:span[data-slider-max-range="true"]
+
+    BuiltIn.Set Suite Variable      ${lmi_selecionado}
+    BuiltIn.Set Suite Variable      ${lmi_máximo}
+
+    Should Be Equal As Strings      ${lmi_selecionado}        ${lmi_máximo}
+
+Indo escolher assistências
+    Click Element                   css:input[type="submit"][value="escolher assistências"]
+    sleep       4
+Escolhendo assistências
+    Click Element                   XPath://*[@id="edit_life_order_flow_assistances_selection_183055"]/section/article[1]/section[2]/div[1]/div[2]/div[1]/div[2]/div

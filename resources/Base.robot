@@ -12,16 +12,16 @@ ${limit}                limit=5
 ${expected_status}      200
 ${ID}                   1009368?
 ${limit_comic}          limit=1
-${PersonName}           Laylla de Oliveira Rodrigues
+${PersonName}           John Hon Shan
 ${PersonEmail}          teste2021@teste.com.br
 ${PersonPhone}          01198765434
 ${PersonBday}           21081996
-${PersonCPF}            382.495.318-84
+${PersonCPF}            123.456.752-09
 ${CEP}                  04538-133
 ${numberAdress}         90
 ${card}                 4111111111111111
 ${cvv}                  737
 ${validateCard}         0330
-&{headers}      ts=${ts}    apikey=${apikey}      hash=${hash}      
-${host}         https://gateway.marvel.com
-${url}          https://qa.youse.io/
+&{headers}              ts=${ts}    apikey=${apikey}      hash=${hash}      
+${host}                 https://gateway.marvel.com
+${url}                  https://qa.youse.io/
