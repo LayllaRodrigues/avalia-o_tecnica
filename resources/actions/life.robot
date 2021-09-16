@@ -153,8 +153,20 @@ Validando que selecionei o limite total de LMI
 
     Should Be Equal As Strings      ${lmi_selecionado}        ${lmi_máximo}
 
+
 Indo escolher assistências
     Click Element                   css:input[type="submit"][value="escolher assistências"]
-    sleep       4
-Escolhendo assistências
-    Click Element                   XPath://*[@id="edit_life_order_flow_assistances_selection_183055"]/section/article[1]/section[2]/div[1]/div[2]/div[1]/div[2]/div
+
+Escolhendo assistência 1
+    Click Element                  css:div[class="switch"][data-switch-toggle="true"][style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"]
+    Click Element                  css:span[class="whenactive"]
+
+    Sleep       3
+
+    Scroll Element Into View        css:div[data-collapsable-trigger="assistance-a-cartao-alimentacao"]
+
+Escolhendo assistência 2
+    Click Element                  css:div[class="switch"][data-switch-toggle="true"][style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"]
+
+Preenchendo meus dados
+    Click Element                   css:input[name="commit"][value="preencher meus dados"]
